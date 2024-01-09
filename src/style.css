@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body,html, #root{
+    width: 100vw;
+    overflow-x: hidden;
+    background: black;
+}
+
+.glow{
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    margin: 50px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 0;
+    box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f, inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+    animation: load 6s ease-in-out infinite;
+}
+.border-animation::before{
+    content: "";
+    background-image: conic-gradient(transparent 340deg,#575ac7 1turn);
+    width: 250%;
+    height: 250%;
+    position: absolute;
+    animation: rotate 4.5s linear infinite;
+}
+
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+    
+}
+
+@keyframes load {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: rotate(180deg);
+        filter: hue-rotate(120deg);
+    }
+    100% {
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+*::-webkit-scrollbar-track {
+    @apply bg-white/20;
+}
+*::-webkit-scrollbar-thumb {
+    @apply bg-white/60;
+}
+*::-webkit-scrollbar-thumb:hover{
+    @apply bg-white/70;
+}
