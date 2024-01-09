@@ -14,7 +14,7 @@ export const ImageContainer: React.FC<Props> = ({ src }) => {
       <div className="align-middle p-2 rounded-2xl z-10 overflow-hidden dark:border-white/10 border border-black/10 bg-background-light dark:bg-background-dark">
         <img
           src={src}
-          className="rounded-xl dark:border-white/10 border border-black/10"
+          className="rounded-xl pointer-events-none dark:border-white/10 border border-black/10"
         />
       </div>
     </div>
