@@ -19,7 +19,7 @@ export default {
         }
       },
       animation:{
-        scrollIn: "scrollIn 700ms cubic-bezier(.4,0,.2,1) both"
+        scrollIn: "scrollIn 700ms cubic-bezier(.4,0,.2,1) backwards"
       },
       colors:{
         background:{

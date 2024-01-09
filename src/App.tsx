@@ -1,16 +1,16 @@
-import { useState } from "react";
 import { cn } from "./lib/utils";
 import { ImageContainer } from "./components/ImageContainer";
 import Image from "./assets/screenshot.png";
 import { Button } from "./components/Button";
 import { NavBar } from "./components/Nav";
 import { Footer } from "./components/Footer";
+import { useDarkMode } from "usehooks-ts";
 
 function App() {
-  const [isDark, setTheme] = useState<boolean>(false);
+  const { isDarkMode } = useDarkMode();
 
   return (
-    <div className={cn(isDark ? "dark" : "light", "w-full overflow-auto")}>
+    <div className={cn(isDarkMode ? "dark" : "light", "w-full overflow-auto")}>
       <div className="relative w-full h-fit bg-background-light dark:bg-background-dark overflow-hidden">
         <NavBar />
         <div className="absolute inset-x-0 -top-40 z-[1] transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none">
@@ -31,9 +31,11 @@ function App() {
             <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.6s]">
               Download
             </Button>
-            <Button className="text-black dark:text-white hover:bg-black/5 hover:dark:bg-white/10 border border-transparent dark:border-white/20 bg-background-light dark:bg-background-dark shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.7s]">
-              Github
-            </Button>
+            <a href="https://github.com/BenDayan123/Beatune-2.0">
+              <Button className="text-black dark:text-white hover:bg-black/5 hover:dark:bg-white/10 border border-transparent dark:border-white/20 bg-background-light dark:bg-background-dark shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.7s]">
+                Github
+              </Button>
+            </a>
           </div>
         </div>
         <ImageContainer src={Image} />
@@ -41,21 +43,28 @@ function App() {
 
         <div className="glow"></div>
 
-        <div className="z-20 max-sm:p-4 py-12 border-t border-white dark:border-background-dark mt-24 px-24 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm shadow-lg">
-          <h3 className="font-semibold text-2xl text-black dark:text-white">
-            Convinced yet?
-          </h3>
-          <p className="text-muted-foreground max-w-lg text-black/50 dark:text-white/50">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque,
-            dolore omnis. Sit aliquam nobis excepturi!
-          </p>
-        </div>
-
-        <div
-          className="fixed aspect-square bottom-0 z-50 right-0 m-2 select-none cursor-pointer rounded-full bg-black/20 dark:bg-white/20 p-3 text-2xl"
-          onClick={() => setTheme((t) => !t)}
-        >
-          {isDark ? "🌑" : "☀️"}
+        <div className="z-20 max-md:p-6 py-12 border-t border-white dark:border-background-dark mt-24 px-24 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm shadow-lg">
+          <div className="flex mx-auto w-1/2 gap-5 justify-between max-md:w-full items-center max-md:flex-col max-md:justify-center">
+            <div className="max-md:text-center">
+              <h3 className="font-semibold text-2xl text-black dark:text-white">
+                Convinced yet?
+              </h3>
+              <p className="text-muted-foreground max-w-lg text-black/50 dark:text-white/50">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Itaque, dolore omnis. Sit aliquam nobis excepturi!
+              </p>
+            </div>
+            <div className="flex justify-center flex-col gap-3 max-md:flex-row">
+              <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg shadow-[#4d4ea4]">
+                Download
+              </Button>
+              <a href="https://github.com/BenDayan123/Beatune-2.0">
+                <Button className="text-black dark:text-white hover:bg-black/5 hover:dark:bg-white/10 border border-transparent dark:border-white/20 bg-background-light dark:bg-background-dark shadow-lg dark:shadow-none">
+                  Github
+                </Button>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
