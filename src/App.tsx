@@ -21,7 +21,7 @@ function App() {
           <div className="animate-scrollIn inline-flex items-cente bg-[#242533] text-[#fafafa] rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 w-fit mx-auto">
             Under construction
           </div>
-          <h1 className="animate-scrollIn animate-delay-200 lg:text-7xl sm:flex-center font-semibold bg-clip-text text-transparent bg-gradient-to-t from-[#111827] dark:from-white via-[#4b5563] dark:via-[#e5e7eb] to-[#111827] dark:to-white">
+          <h1 className="animate-scrollIn animate-delay-200 text-7xl font-semibold bg-clip-text text-transparent bg-gradient-to-t from-[#111827] dark:from-white via-[#4b5563] dark:via-[#e5e7eb] to-[#111827] dark:to-white">
             Hear sound all around.
           </h1>
           <p className="animate-scrollIn animate-delay-[400ms] text-black/70 dark:text-white/70">
@@ -41,7 +41,7 @@ function App() {
 
         <div className="glow"></div>
 
-        <div className="z-20 py-12 border-t border-white dark:border-background-dark mt-24 px-24 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm shadow-lg">
+        <div className="z-20 max-sm:p-4 py-12 border-t border-white dark:border-background-dark mt-24 px-24 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm shadow-lg">
           <h3 className="font-semibold text-2xl text-black dark:text-white">
             Convinced yet?
           </h3>
