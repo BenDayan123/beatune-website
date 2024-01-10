@@ -1,6 +1,7 @@
 import { useDarkMode } from "usehooks-ts";
 import Logo from "../assets/logo.png";
 import { Switch } from "./Switch";
+import { PropsWithChildren } from "react";
 
 interface Props {}
 
@@ -16,33 +17,9 @@ export const NavBar: React.FC<Props> = () => {
           </a>
         </div>
         <ul className="gap-6 flex-1 hidden sm:flex">
-          <li role="button" className="list-none">
-            <a
-              aria-current="page"
-              className="text-sm text-muted-foreground hover:text-foreground font-medium"
-              href="/#features"
-            >
-              Features
-            </a>
-          </li>
-          <li role="button" className="list-none">
-            <a
-              aria-current="page"
-              className="text-sm text-muted-foreground hover:text-foreground font-medium"
-              href="/#pricing"
-            >
-              Pricing
-            </a>
-          </li>
-          <li role="button" className="list-none">
-            <a
-              aria-current="page"
-              className="text-sm text-muted-foreground hover:text-foreground font-medium"
-              href="/docs/features"
-            >
-              Docs
-            </a>
-          </li>
+          <Link href="#features">Features</Link>
+          <Link>Pricing</Link>
+          <Link>Docs</Link>
         </ul>
         <div className="flex items-center gap-3 font-bold">
           <p className="dark:opacity-20">☀️</p>
@@ -51,5 +28,25 @@ export const NavBar: React.FC<Props> = () => {
         </div>
       </div>
     </nav>
+  );
+};
+
+const Link: React.FC<
+  PropsWithChildren<
+    React.DetailedHTMLProps<
+      React.AnchorHTMLAttributes<HTMLAnchorElement>,
+      HTMLAnchorElement
+    >
+  >
+> = ({ children, ...props }) => {
+  return (
+    <li role="button" className="list-none">
+      <a
+        {...props}
+        className="text-sm font-semibold opacity-80 hover:opacity-100 hover:scale-110"
+      >
+        {children}
+      </a>
+    </li>
   );
 };
