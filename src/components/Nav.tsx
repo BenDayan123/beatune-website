@@ -17,8 +17,8 @@ export const NavBar: React.FC<Props> = () => {
           </a>
         </div>
         <ul className="gap-6 flex-1 hidden sm:flex">
-          <Link href="#features">Features</Link>
-          <Link>Pricing</Link>
+          <Link href="#">Features</Link>
+          <Link href="#">Pricing</Link>
           <Link>Docs</Link>
         </ul>
         <div className="flex items-center gap-3 font-bold">

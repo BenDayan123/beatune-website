@@ -9,6 +9,7 @@ import { Features } from "./components/Features";
 import GridGlow from "./components/GlowGrid";
 import { MdBuild } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
+import { PricePage } from "./components/PricePage";
 
 function App() {
   const { isDarkMode } = useDarkMode();
@@ -48,7 +49,7 @@ function App() {
         <ImageContainer src={Image} />
         <Features />
         <div className="glow-circle"></div>
-        <div className="h-screen"></div>
+        <PricePage />
         <div className="z-20 max-md:p-6 py-12 border-t border-white dark:border-background-dark mt-24 px-24 bg-background-light/50 dark:bg-background-dark/50 backdrop-blur-sm shadow-lg">
           <div className="flex mx-auto w-1/2 gap-5 justify-between max-md:w-full items-center max-md:flex-col max-md:justify-center">
             <div className="max-md:text-center">

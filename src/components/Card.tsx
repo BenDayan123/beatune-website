@@ -22,7 +22,7 @@ export const Card: React.FC<PropsWithChildren<Props>> = ({
   return (
     <div
       className={cn(
-        "relative overflow-hidden flex flex-col shadow-xl select-none space-y-2 dark:text-white w-full z-10 text-gray-700 bg-background-light/50 dark:bg-background-dark/80 transition-colors backdrop-blur-sm mt-10 p-6 mx-auto rounded-md border-[0.4px] border-background-dark/20 dark:border-background-light/20",
+        "relative overflow-hidden flex flex-col shadow-xl select-none space-y-2 dark:text-white w-full z-10 text-gray-700 bg-background-light/80 dark:bg-background-dark/80 transition-colors backdrop-blur-sm mt-10 p-6 mx-auto rounded-md border-[0.4px] border-background-dark/20 dark:border-background-light/20",
         className
       )}
     >

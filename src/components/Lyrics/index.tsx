@@ -30,19 +30,19 @@ export const LyricsBox: React.FC = () => {
       ref={ref}
       className="lines relative px-5 p-3 my-auto overflow-hidden rounded-md max-h-[150px]"
     >
-      <div className="rounded-md w-full h-full absolute top-0 left-0 bg-gradient-to-b from-background-light/50 dark:from-background-dark/50 to-transparent"></div>
+      <div className="rounded-md z-[5] w-full h-full absolute top-0 left-0 bg-gradient-to-b from-background-light dark:from-background-dark to-transparent"></div>
       {lines.map((line, i) => (
         <p
           key={i}
           className={cn(
-            "relative line font-bold text-2xl opacity-60 transition-all text-center",
+            "relative line z-[1] font-bold text-2xl opacity-60 transition-all text-center",
             lineIndex === i && "opacity-100 scale-125 drop-shadow-md z-10"
           )}
         >
           {line}
         </p>
       ))}
-      <div className="rounded-md w-full h-full absolute bottom-0 left-0 bg-gradient-to-t from-background-light/50 dark:from-background-dark/50 to-transparent"></div>
+      <div className="rounded-md z-[5] w-full h-full absolute bottom-0 left-0 bg-gradient-to-t from-background-light dark:from-background-dark to-transparent"></div>
     </div>
   );
 };
