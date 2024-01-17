@@ -35,9 +35,11 @@ function App() {
             Listen and discover. In perfect harmony ♫
           </p>
           <div className="flex justify-center gap-2">
-            <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.6s]">
-              Download
-            </Button>
+            <a href="./assets/beatune_installer.msi" download>
+              <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.6s]">
+                Download
+              </Button>
+            </a>
             <a href="https://github.com/BenDayan123/Beatune-2.0">
               <Button className="text-black dark:text-white hover:bg-black/5 hover:dark:bg-white/10 border border-transparent dark:border-white/20 bg-background-light dark:bg-background-dark shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.7s]">
                 <IoLogoGithub />
@@ -62,9 +64,11 @@ function App() {
               </p>
             </div>
             <div className="flex justify-center flex-col gap-3 max-md:flex-row">
-              <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg shadow-[#4d4ea4]">
-                Download
-              </Button>
+              <a href="./assets/beatune_installer.msi" download>
+                <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg shadow-[#4d4ea4]">
+                  Download
+                </Button>
+              </a>
               <a href="https://github.com/BenDayan123/Beatune-2.0">
                 <Button className="text-black dark:text-white hover:bg-black/5 hover:dark:bg-white/10 border border-transparent dark:border-white/20 bg-background-light dark:bg-background-dark shadow-lg dark:shadow-none">
                   <IoLogoGithub />
