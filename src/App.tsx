@@ -35,7 +35,7 @@ function App() {
             Listen and discover. In perfect harmony ♫
           </p>
           <div className="flex justify-center gap-2">
-            <a href="./assets/beatune_installer.msi" download>
+            <a href="src\assets\beatune_installer.msi" download>
               <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg dark:shadow-none animate-scrollIn animate-delay-[.6s]">
                 Download
               </Button>
@@ -64,7 +64,7 @@ function App() {
               </p>
             </div>
             <div className="flex justify-center flex-col gap-3 max-md:flex-row">
-              <a href="./assets/beatune_installer.msi" download>
+              <a href="src\assets\beatune_installer.msi" download>
                 <Button className="text-white bg-[#4d4ea4] hover:brightness-90 shadow-lg shadow-[#4d4ea4]">
                   Download
                 </Button>
